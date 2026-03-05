@@ -24,6 +24,14 @@ test('resta correctamente dos números', () => {
     expect(resultado).toBe(2);
 });
 
+test('divide correctamente dos números', () => {
+    const dividir = (a, b) => a / b;
+
+    const resultado = aplicarOperacion(10, 2, dividir);
+
+    expect(resultado).toBe(5);
+});
+
 test('lanza error si no se pasa una función', () => {
     expect(() => {
         aplicarOperacion(2, 3, "no es funcion");
